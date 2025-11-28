@@ -1,0 +1,56 @@
+version: "3.8"
+
+services:
+
+  mysql_db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - flask_network
+
+  backend:
+    build: ./backend_flask
+    container_name: flask_backend
+    restart: always
+    environment:
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_PORT: ${DB_PORT}
+      DB_HOST: mysql_db
+      FLASK_ENV: development
+    volumes:
+      - ./backend_flask:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql_db
+    networks:
+      - flask_network
+
+  frontend:
+    build: ./frontend_flask
+    container_name: flask_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend_flask:/usr/share/nginx/html
+    networks:
+      - flask_network
+    depends_on:
+      - backend
+
+networks:
+  flask_network:
+
+volumes:
+  mysql_data:

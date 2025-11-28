@@ -1,0 +1,94 @@
+/* ----------- Page Background ----------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #dbe7ff, #eef5ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------- Wrapper ----------- */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ----------- Registration Card ----------- */
+.register-card {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(15px);
+    padding: 35px 40px;
+    border-radius: 22px;
+    box-shadow: 0 10px 28px rgba(110, 130, 180, 0.25);
+    border: 1px solid rgba(200, 210, 255, 0.45);
+}
+
+.register-card h1 {
+    margin: 0 0 25px 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #23386f;
+    letter-spacing: 0.5px;
+}
+
+/* ----------- Form Layout ----------- */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2d3e70;
+    font-size: 14px;
+}
+
+form input {
+    width: 100%;
+    padding: 13px;
+    margin-top: 6px;
+    border-radius: 12px;
+    background: #f4f7ff;
+    border: 1px solid #c8d7f8;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #3d6bff;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(61, 107, 255, 0.2);
+}
+
+/* ----------- Register Button ----------- */
+#registerBtn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #3d6bff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 4px 10px rgba(61, 107, 255, 0.35);
+}
+
+#registerBtn:hover {
+    background: #2c54db;
+    box-shadow: 0 5px 14px rgba(61, 107, 255, 0.45);
+}
+
+/* ----------- Mobile Responsive ----------- */
+@media (max-width: 480px) {
+    .register-card {
+        width: 90%;
+        padding: 25px;
+    }
+}

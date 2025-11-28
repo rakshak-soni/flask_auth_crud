@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>View Products</title>
+  <link rel="stylesheet" href="../css/viewproduct.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Products</h1>
+    <div class="top-actions">
+      <button onclick="location.href='addProduct.html'">Add Product</button>
+      <button onclick="location.href='home.html'">Home</button>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div id="productContainer" class="card"></div>
+
+    <div id="previewModal" class="modal hidden" onclick="hidePreview()">
+      <img id="previewImg" alt="preview">
+    </div>
+  </main>
+
+  <script src="../js/viewProduct.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

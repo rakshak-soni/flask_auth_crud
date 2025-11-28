@@ -1,0 +1,227 @@
+:root {
+    --bg: #f0f2f5;
+    --card: #ffffff;
+    --accent: #6c5ce7;  /* violet-blue */
+    --accent-dark: #5b4edc;
+    --danger: #ff4b4b;
+    --danger-dark: #e60000;
+    --text-dark: #333;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: var(--bg);
+    padding: 20px;
+    color: var(--text-dark);
+}
+
+/* Header */
+.topbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Center Title */
+.topbar h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent);
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Action Buttons */
+.top-actions {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.top-actions button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+/* Add Product Button */
+.top-actions button:first-child {
+    background: var(--accent);
+    color: #fff;
+}
+
+.top-actions button:first-child:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+/* Home Button */
+.top-actions button:last-child {
+    background: #636e72;
+    color: #fff;
+}
+
+.top-actions button:last-child:hover {
+    background: #4b5458;
+    transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Card / Table Wrapper */
+.card {
+    background: var(--card);
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #f9f9ff;
+}
+
+tr:hover {
+    background: #eceaff;
+}
+
+/* Product Images */
+td img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+}
+
+/* Action Buttons */
+.actions-row {
+    display: flex;
+    gap: 10px;
+}
+
+.actions-row button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+/* Edit Button */
+.actions-row button.edit {
+    background: var(--accent);
+    color: #fff;
+}
+
+.actions-row button.edit:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+/* Delete Button */
+.actions-row button.delete {
+    background: var(--danger);
+    color: #fff;
+}
+
+.actions-row button.delete:hover {
+    background: var(--danger-dark);
+    transform: translateY(-2px);
+}
+
+/* Image Preview Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    background: #fff;
+    padding: 6px;
+    box-shadow: 0 4px 25px rgba(255,255,255,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+    }
+
+    .topbar h1 {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .top-actions {
+        margin-left: 0;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .actions-row {
+        flex-direction: column;
+    }
+
+    .actions-row button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Subcategory</title>
+    <link rel="stylesheet" href="../css/viewsubcategory.css" />
+</head>
+<body>
+    <header>
+        <h1>Subcategories</h1>
+        <div class="header-actions">
+            <button class="home-btn" onclick="location.href='home.html'">Home</button>
+            <button class="add-btn" onclick="location.href='addSubcategory.html'">Add Subcategory</button>
+        </div>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Subcategory</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="subcategoryTable"></tbody>
+        </table>
+    </main>
+
+    <script src="../js/viewSubcategory.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

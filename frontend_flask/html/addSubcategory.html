@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Subcategory</title>
+    <link rel="stylesheet" href="../css/addsubcategory.css" />
+</head>
+<body>
+    <header>
+        <h1>Add Subcategory</h1>
+        <button class="home-btn" onclick="location.href='home.html'">Home</button>
+    </header>
+
+    <main>
+        <form id="addSubcategoryForm">
+            <label for="categorySelect">Category:</label>
+            <select id="categorySelect" required></select>
+
+            <label for="subcategoryName">Subcategory Name:</label>
+            <input type="text" id="subcategoryName" required />
+
+            <label for="subcategoryDescription">Description:</label>
+            <textarea id="subcategoryDescription" rows="4" required></textarea>
+
+            <button type="submit" class="add-btn">Add Subcategory</button>
+        </form>
+
+        <div class="back-link">
+            <a href="viewSubcategory.html">&larr; Back to Subcategories</a>
+        </div>
+    </main>
+
+    <script src="../js/addSubcategory.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

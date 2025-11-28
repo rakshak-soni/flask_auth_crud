@@ -1,0 +1,179 @@
+/* ---------- Global Layout ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #e8f4ff);
+    color: #1f2d4b;
+    min-height: 100vh;
+}
+
+/* ---------- Top Bar ---------- */
+.topbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(180, 195, 255, 0.5);
+    padding: 20px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #23386f;
+    letter-spacing: 0.5px;
+}
+
+.top-actions button {
+    background: #3d6bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.25s ease;
+    box-shadow: 0 3px 8px rgba(70, 100, 255, 0.25);
+}
+
+.top-actions button:hover {
+    background: #2c54db;
+    box-shadow: 0 4px 12px rgba(60, 80, 255, 0.35);
+}
+
+/* ---------- Container ---------- */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    padding: 20px;
+}
+
+/* ---------- Card (Form Layout) ---------- */
+.card {
+    width: 470px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    padding: 32px;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(110, 130, 180, 0.18);
+    border: 1px solid rgba(200, 210, 255, 0.5);
+}
+
+.card label {
+    display: block;
+    margin-top: 18px;
+    font-weight: 600;
+    color: #24417b;
+    font-size: 14px;
+}
+
+/* ---------- Inputs ---------- */
+.card input,
+.card textarea,
+.card select {
+    width: 100%;
+    padding: 13px;
+    border-radius: 12px;
+    border: 1px solid #c9d7f8;
+    margin-top: 6px;
+    font-size: 14px;
+    background: #f4f7ff;
+    transition: 0.25s;
+}
+
+.card input:focus,
+.card textarea:focus,
+.card select:focus {
+    outline: none;
+    border-color: #3d6bff;
+    box-shadow: 0 0 0 3px rgba(61, 107, 255, 0.2);
+    background: white;
+}
+
+/* ---------- Row Input (Price + Quantity) ---------- */
+.row {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.row div {
+    flex: 1;
+}
+
+/* ---------- Preview Image ---------- */
+.preview {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    background: #eef3ff;
+    border-radius: 14px;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid #cdd9ff;
+    box-shadow: inset 0 2px 6px rgba(0, 20, 80, 0.05);
+}
+
+/* ---------- Actions ---------- */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.actions button {
+    width: 48%;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: 0.25s;
+    font-weight: 600;
+}
+
+/* Save Button */
+.actions #saveBtn {
+    background: #3d6bff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(61, 107, 255, 0.3);
+}
+
+.actions #saveBtn:hover {
+    background: #2c54db;
+    box-shadow: 0 5px 14px rgba(61, 107, 255, 0.4);
+}
+
+/* Cancel Button */
+.actions button:nth-child(2) {
+    background: #edf1fa;
+    color: #2d3e70;
+}
+
+.actions button:nth-child(2):hover {
+    background: #dbe0ed;
+}
+
+/* ---------- Mobile Friendly ---------- */
+@media (max-width: 520px) {
+    .card {
+        width: 92%;
+        padding: 25px;
+    }
+
+    .topbar {
+        padding: 15px 20px;
+    }
+
+    .top-actions button {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}

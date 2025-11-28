@@ -1,0 +1,140 @@
+/* Global page styling */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5c6ac4; /* modern purple-blue */
+    color: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+header .home-btn {
+    background: #ffffff33; /* semi-transparent white */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header .home-btn:hover {
+    background: #ffffff77;
+}
+
+/* Main card */
+main {
+    max-width: 520px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+main:hover {
+    transform: translateY(-3px);
+}
+
+/* Form styling */
+form label {
+    display: block;
+    margin-top: 18px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #5c6ac4;
+    box-shadow: 0 0 8px rgba(92, 106, 196, 0.3);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Add button */
+form .add-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background-color: #5c6ac4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form .add-btn:hover {
+    background-color: #4b57a1;
+    transform: translateY(-2px);
+}
+
+/* Back link styling */
+.back-link {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.back-link a {
+    color: #5c6ac4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #3f4590;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    main {
+        padding: 25px 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    header h1 {
+        text-align: center;
+        width: 100%;
+    }
+}

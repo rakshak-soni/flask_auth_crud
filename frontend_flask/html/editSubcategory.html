@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Subcategory</title>
+    <link rel="stylesheet" href="../css/editsubcategory.css" />
+</head>
+<body>
+    <header>
+        <h1>Edit Subcategory</h1>
+        <div class="header-buttons">
+            <button onclick="location.href='viewSubcategory.html'" class="back-btn">Back</button>
+        </div>
+    </header>
+
+    <main>
+        <form id="editSubcategoryForm">
+            <input type="hidden" id="subcategoryId" />
+
+            <label for="categorySelect">Category:</label>
+            <select id="categorySelect" required></select>
+
+            <label for="subcategoryName">Subcategory Name:</label>
+            <input type="text" id="subcategoryName" required />
+
+            <label for="subcategoryDescription">Description:</label>
+            <textarea id="subcategoryDescription" required></textarea>
+
+            <div class="form-buttons">
+                <button type="submit" class="update-btn">Update</button>
+                <button type="button" class="cancel-btn" onclick="location.href='viewSubcategory.html'">Cancel</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="../js/editSubcategory.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

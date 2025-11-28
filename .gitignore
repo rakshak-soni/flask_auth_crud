@@ -1,0 +1,77 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.db
+*.sqlite3
+
+# Virtual Environment
+venv/
+env/
+
+# Flask instance folder
+instance/
+
+# PyTest / Coverage
+.coverage
+htmlcov/
+pytest_cache/
+
+# -------------------------
+# Environment Variables
+# -------------------------
+*.env
+.env.*
+!example.env
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+log/
+logs/
+
+# -------------------------
+# IDE / Editor
+# -------------------------
+.vscode/
+*.code-workspace
+.idea/
+*.iml
+
+# -------------------------
+# OS Files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Node / Frontend (if needed)
+# -------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# -------------------------
+# Docker
+# -------------------------
+docker-data/
+mysql_data/
+*/__pycache__/
+
+# Ignore database dump files
+*.sql
+*.sql.gz
+
+# -------------------------
+# Nginx
+# -------------------------
+*.pid
+temp/
+cache/

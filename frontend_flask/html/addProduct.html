@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Add Product</title>
+  <link rel="stylesheet" href="../css/addproduct.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Add Product</h1>
+    <div class="top-actions">
+      <button onclick="location.href='viewProduct.html'">View Products</button>
+      <button onclick="location.href='home.html'">Home</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="productForm" class="card" enctype="multipart/form-data" novalidate>
+      <label>Category</label>
+      <select id="product_category_id" name="product_category_id" required></select>
+
+      <label>Subcategory</label>
+      <select id="product_subcategory_id" name="product_subcategory_id" required>
+        <option value="">Select Subcategory</option>
+      </select>
+
+      <label>Product Name</label>
+      <input type="text" name="product_name" id="product_name" required>
+
+      <label>Description</label>
+      <textarea name="product_description" id="product_description" rows="4" required></textarea>
+
+      <div class="row">
+        <div>
+          <label>Price</label>
+          <input type="number" name="product_price" id="product_price" required>
+        </div>
+        <div>
+          <label>Quantity</label>
+          <input type="number" name="product_quantity" id="product_quantity" required>
+        </div>
+      </div>
+
+      <label>Image</label>
+      <input type="file" name="product_image" id="product_image" accept="image/*">
+
+      <div class="actions">
+        <button type="submit">Add Product</button>
+        <button type="button" onclick="location.href='viewProduct.html'">Cancel</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="../js/addProduct.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

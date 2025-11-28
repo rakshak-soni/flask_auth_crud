@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Categories</title>
+    <link rel="stylesheet" href="../css/viewCategory.css">
+    <script src="../js/auth.js"></script>
+    <script src="../js/viewCategory.js"></script>
+</head>
+
+<body onload="loadCategories()">
+
+    <h2>View Categories</h2>
+
+    <div class="top-actions">
+        <button class="home-btn" onclick="window.location.href='home.html'">
+            Home
+        </button>
+
+        <button class="add-btn" onclick="window.location.href='addCategory.html'">
+            + Add Category
+        </button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Category Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="categoryTable"></tbody>
+    </table>
+
+</body>
+</html>

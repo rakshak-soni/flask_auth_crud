@@ -1,0 +1,142 @@
+/* Global Styling */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Page Title */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #6c5ce7; /* modern violet-blue */
+}
+
+/* Top action buttons container */
+.top-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Home Button */
+.home-btn {
+    background: #636e72;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn:hover {
+    background: #4b5458;
+    transform: translateY(-2px);
+}
+
+/* Add Category Button */
+.add-btn {
+    background: #6c5ce7;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+    background: #5b4edc;
+    transform: translateY(-2px);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+table th, table td {
+    padding: 14px 16px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+table th {
+    background: #6c5ce7;
+    color: white;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tr:hover {
+    background: #e6e6ff;
+}
+
+/* Action buttons in table */
+table button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+/* Edit Button */
+table button:first-child {
+    background: #6c5ce7;
+    color: white;
+}
+
+table button:first-child:hover {
+    background: #5b4edc;
+    transform: translateY(-2px);
+}
+
+/* Delete Button */
+table button:last-child {
+    background: #ff4b4b;
+    color: white;
+    margin-left: 8px;
+}
+
+table button:last-child:hover {
+    background: #e60000;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .top-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table th, table td {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    table button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
